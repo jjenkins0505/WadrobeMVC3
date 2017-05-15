@@ -1,0 +1,33 @@
+﻿@model WardrobeMVC3.Models.Wardrobe
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Wardrobe</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-6">
+    <h2> @Html.DisplayFor(model => model.FirstName)</h2>
+    <h4> @Html.DisplayNameFor(model => model.LastName) : @Html.DisplayFor(model => model.LastName) </h4>
+    <h4>@Html.DisplayNameFor(model => model.Item.Item1) : @Html.DisplayFor(model => model.Item.Item1)</h4>
+    <h4>@Html.DisplayNameFor(model => model.Color.Color1) : @Html.DisplayFor(model => model.Color.Color1) </h4>
+    <h4>@Html.DisplayNameFor(model => model.Season.Season1) : @Html.DisplayFor(model => model.Season.Season1) </h4>   
+    <h4>@Html.DisplayNameFor(model => model.Occasion.Occasion1) : @Html.DisplayFor(model => model.Occasion.Occasion1)</h4> 
+</div>
+       <div class="col-md-6">
+      @*pictures of me in my clothes helps me remember what clothes I have, and what they look like.*@ 
+       <img height="600" width="400" src="@Url.Content(Model.Photos)" />
+               </div>
+        </div>
+    </div>
+
+
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.WardrodeID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

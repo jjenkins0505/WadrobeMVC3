@@ -1,0 +1,138 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron jumbosettings">
+    
+   <div class="page-header textsettings">
+    <h1>Welcome To Your Wardrobe</h1>
+   </div> 
+    
+</div>
+
+
+
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Recent Purchases</h2>
+        <p></p>
+        <p>
+            Fashion is not something that exists in dresses only. Fashion is in the sky, in the street, fashion has to do with ideas, the way we live, what is happening. Luxury must be comfortable, otherwise it is not luxury. Fashion is made to become unfashionable. Some people think luxury is the opposite of poverty. It is not. It is the opposite of vulgarity. Fashion fades, only style remains the same.
+        </p>
+        <p><a class="btn btn-default" href="https://www.forever21.com/Checkout/Basket.aspx?br=f21">Recent Purchase &raquo;</a></p>
+    </div>
+
+    @*just in case the link expires, it points to my recent shopping cart purchase at Forever 21*@
+
+    <div class="col-md-2">
+        <div class="thumbnail">
+            <img id="jumboImagesetting" src="~/Content/Images/5051709693_2a96165c02_b.jpg" />
+        </div>
+    </div>
+
+    
+
+
+         <div class="col-md-4">
+            <h2>Wish List</h2>
+            <p>A girl should be two things: classy and fabulous. A woman has the age she deserves. Fashion is made to become unfashionable. A girl should be two things: classy and fabulous. Fashion fades, only style remains the same.</p>
+            <p><a class="btn btn-default" href="http://us.christianlouboutin.com/us_en/shop/women/explozina.html">Wish List &raquo;</a></p>
+        </div>
+        
+    @*I dont think my wish list will ever come true, but a girl can dream right??*@
+
+    <div class="col-md-2">
+         <div class="thumbnail">
+      <img id="jumboImagesetting" src="~/Content/Images/pumps-154636_960_720.png" />
+        </div>
+    </div>
+    </div>
+
+
+<div class="row">
+        <div class="col-md-4">
+            <h2>Clean Out Your Closet</h2>
+            <p>Some people think luxury is the opposite of poverty. It is not. It is the opposite of vulgarity. A girl should be two things: classy and fabulous. A woman has the age she deserves. Elegance is not the prerogative of those who have just escaped from adolescence, but of those who have already taken possession of their future. A girl should be two things: classy and fabulous.</p>
+            <a class="btn btn-default" src= @Html.ActionLink("Delete Item","Index", "Wardrobes")></a>
+
+           
+         </div>
+
+    <div class="col-md-2"> 
+        <div class="thumbnail">
+    <img id="jumboImagesetting" src="~/Content/Images/5638872152_72af0eca61_b.jpg" />
+        </div>
+
+</div>
+        <div class="col-md-4">
+            <h2>Plan Your Outfit</h2>
+            <p>In order to be irreplaceable one must always be different. In order to be irreplaceable one must always be different. Luxury must be comfortable, otherwise it is not luxury. A girl should be two things: classy and fabulous. Elegance is not the prerogative of those who have just escaped from adolescence, but of those who have already taken possession of their future.</p>
+          <a class="btn btn-default">Get Dressed</a>
+              @*could not figure this part out, Sorry :(*@
+        </div>
+
+        <div class="col-md-2">
+            <div class="thumbnail">
+                <img id="jumboImagesetting" src="~/Content/Images/16897407273_d15c9540ab_z.jpg" />
+            </div>
+
+        </div>
+
+    </div>
+
+<hr/>
+
+
+@*Here is my carousel full of beautiful quotes!*@
+
+<div id="myCarousel" class="carousel slide carasoulTextSettings" data-ride="carousel" >
+    <!-- Indicators -->
+    <ol class="carousel-indicators carasoulTextSettings">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner ">
+        <div class="item active">
+            <p>You are beautiful no matter what you wear!</p>
+        </div>
+
+        <div class="item">
+            <p>Clothes dont make people look good, people make clothes look good!</p>
+        </div>
+
+        <div class="item">
+            <p>Love yourself so much that people want to help you do it!</p>
+        </div>
+
+        <div class="item">
+            <p>Beauty is skin deep!</p>
+        </div>
+
+        <div class="item">
+            <p>Love of beauty is taste, the creation of beauty is art!</p>
+        </div>
+
+        <div class="item">
+            <p>You can have anything you want if you dress for it!</p>
+        </div>
+
+        <div class="item">
+            <p>Style is primarily a matter of instinct!</p>
+        </div>
+
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>

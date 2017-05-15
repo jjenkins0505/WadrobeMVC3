@@ -1,0 +1,68 @@
+﻿@model IEnumerable<WardrobeMVC3.Models.Wardrobe>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Your Closet Is So Bomb!</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+<div class="row">
+      
+        <div class="col-md-2">
+           <h4> @Html.DisplayNameFor(model => model.LastName)</h4>
+        </div>
+       
+        
+        <div class="col-md-2">
+            
+         <h4>@Html.DisplayNameFor(model => model.Color.Color1)</h4>
+        </div>
+
+        <div class="col-md-2">
+          <h4>  @Html.DisplayNameFor(model => model.Item.Item1)</h4>
+        </div>
+
+        <div class="col-md-2">
+           <h4> @Html.DisplayNameFor(model => model.Occasion.Occasion1)</h4>
+        </div>
+
+        <div class="col-md-2">
+          <h4>  @Html.DisplayNameFor(model => model.Season.Season1)</h4>
+        </div>
+        
+    </div>
+
+@foreach (var item in Model) {
+    <div class="row">
+        <div class="col-md-2">
+            @Html.DisplayFor(modelItem => item.LastName)
+        </div>
+
+        <div class="col-md-2">                 
+            @Html.DisplayFor(modelItem => item.Color.Color1)
+        </div>
+        
+        <div class="col-md-2">
+            @Html.DisplayFor(modelItem => item.Item.Item1)
+        </div>
+
+        <div class="col-md-2">
+            @Html.DisplayFor(modelItem => item.Occasion.Occasion1)
+        </div>
+        <div class="col-md-2">
+            @Html.DisplayFor(modelItem => item.Season.Season1)
+        </div>
+        <div class="col-md-2">
+            @Html.ActionLink("Edit", "Edit", new { id=item.WardrodeID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.WardrodeID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.WardrodeID })
+        </div>
+    </div>
+    
+}
+
+</div>
